@@ -1,5 +1,6 @@
 import Banner from "../components/home/Banner";
 import DeliveryProcess from "../components/home/DeliveryProcess";
+import ExoticFood from "../components/home/ExoticFood";
 import FeaturedProduct from "../components/home/FeaturedProduct";
 import HeroSection from "../components/home/HeroSection";
 import Test from "../components/home/Test";
@@ -17,6 +18,7 @@ const Home = () => {
             <Banner />
             <DeliveryProcess />
             <Testimonial />
+             <ExoticFood />
         </div>
     );
 };
