@@ -28,3 +28,28 @@
     background-image: url("../src/assets/images/share/sub-header-section-mobile.webp");
   }
   /* Background End */
+
+  .categories:hover svg path {
+    fill: white;
+  }
+
+  /* Delivery Process started  */
+  @media (min-width: 1146px) and (max-width: 1279px) {
+    .dots {
+      left: calc(100% + 20px);
+    }
+  }
+  @media (min-width: 1024px) and (max-width: 1145px) {
+    .dots {
+      left: calc(100% + 6px);
+      gap: 12px;
+    }
+  }
+  
+  .dots span.active {
+    height: 10px;
+    width: 10px;
+    background: #91bf73;
+    /* @apply bg-primary_3; */
+  }
+  /* Delivery Process end  */
