@@ -48,9 +48,9 @@ const Navbar = () => {
                 <Heart size={20} className="text-p_text" />
               </button>
               <button className="bg-[#F2F2F2] py-2 px-2 rounded-full">
-                <a href="./pages/cart.html">
+                <Link to="/cart">
                   <ShoppingCart size={20} className="text-p_text" />
-                </a>
+                </Link>
               </button>
               <button className="bg-[#F2F2F2] py-2 px-2 rounded-full hidden md:block">
                 <UserCircle size={20} className="text-p_text" />
