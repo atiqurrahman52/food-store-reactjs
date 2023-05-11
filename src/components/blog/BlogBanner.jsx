@@ -2,7 +2,7 @@
 
 const BlogBanner = () => {
     return (
-        <section className="pt-[70px] md:pt-20">
+        <div>
     <div className="sub-header h-[300px] bg-cover bg-center bg-no-repeat hidden md:block">
      <div className="flex flex-col justify-center items-center h-full">
       <h3 className="font-Playfair font-black text-xl md:text-5xl text-text_color mb-[14px]">Blog</h3>
@@ -36,7 +36,7 @@ const BlogBanner = () => {
      </div>
     </div>
     
-  </section>
+  </div>
     );
 };
 

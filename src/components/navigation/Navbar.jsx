@@ -21,8 +21,8 @@ const Navbar = () => {
     });
   }, []);
   return (
-    <div className="">
-      <div className="py-5 fixed w-full bg-white z-20 shadow-[0_0px_22px_rgba(119,119,119,0.19)]">
+    <div className="sticky top-0 z-20">
+      <div className="py-5 w-full bg-white shadow-[0_0px_22px_rgba(119,119,119,0.19)]">
         <div className="container">
           <div className="flex justify-between items-center">
             <Link to="./">
