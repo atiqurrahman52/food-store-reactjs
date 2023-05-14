@@ -1,4 +1,4 @@
-// /assets/images/blog/post-1.webp"
+
 import image_1 from '../../assets/images/blog/post-1.webp';
 import image_2 from '../../assets/images/blog/post-2.webp';
 import image_3 from '../../assets/images/blog/post-3.webp';

@@ -38,7 +38,7 @@ const Footer = () => {
                     className="font-Montserrat font-medium text-xs md:text-base text-white"
                     key={id}
                   >
-                    <Link path={path}>{title}</Link>
+                    <Link to={path}>{title}</Link>
                   </li>
                 ))}
               </ul>

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import leaf from "../../assets/images/share/leaf.png";
 import lemon from "../../assets/images/blog/lemon.webp";
-
 import blogData from "../../data/blog/blogData";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import blogArchivesData from "../../data/blog/blogArchivesData";
@@ -32,13 +31,14 @@ const BlogNews = () => {
                 {
                     blogData.map(({id,img,title,calendar,date,user,userName}) =>(
                         <div key={id} className="relative overflow-hidden rounded-xl">
-                  <Link to="#">
+                  <Link to={`/blog-detail/${id}`}>
+                  {/* <Link to='/blog-detail'> */}
                     <img
                       className="w-full"
                       src={img}
                       alt=""
                     />
-                  </Link>
+                 
                   <div className="absolute bg-[#18271BB8] p-6 bottom-0 w-full">
                     <p className="font-Montserrat font-medium text-sm md:text-base text-white mb-4 md:mb-3">
                     {title}
@@ -63,6 +63,7 @@ const BlogNews = () => {
                       </div>
                     </div>
                   </div>
+                  </Link>
                 </div>
                     ))
                 }
