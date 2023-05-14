@@ -1,12 +1,9 @@
-
 // import recentPostData from "../../data/blog/recentPostData";
-import { Link } from 'react-router-dom';
-import post_1 from '../../assets/images/blog/post-1.webp';
-import post_2 from '../../assets/images/blog/post-2.webp';
-import post_3 from '../../assets/images/blog/post-3.webp';
-import lemon from '../../assets/images/blog/lemon.webp'
-
-
+import { Link } from "react-router-dom";
+import post_1 from "../../assets/images/blog/post-1.webp";
+import post_2 from "../../assets/images/blog/post-2.webp";
+import post_3 from "../../assets/images/blog/post-3.webp";
+import lemon from "../../assets/images/blog/lemon.webp";
 
 const RecentPost = () => {
   return (
@@ -58,41 +55,50 @@ const RecentPost = () => {
               </div>
             </div>
           ))} */}
-          
-                <Link to="#" className="flex items-center gap-3">
-                  <div>
-                   <img className="rounded-xl"
-                        src={post_1} alt="" />
-                  </div>
-                  <div>
-                    <h3 className="mb-3 font-Montserrat font-medium text-sm text-text_color">vegan and meet all <br />
-                      your needs?</h3>
-                    <span className="font-Montserrat font-medium text-xs text-[#699C47]">March 02.2022</span>
-                  </div>
-                </Link>
 
-         <Link to="" className="flex items-center gap-3">
-                  <div>
-                    <img className="rounded-xl" src={post_2}
-                        alt="" />
-                  </div>
-                  <div>
-                    <h3 className="mb-3 font-Montserrat font-medium text-sm text-text_color">vegan and meet all <br />
-                      your needs?</h3>
-                    <span className="font-Montserrat font-medium text-xs text-[#699C47]">March 02.2022</span>
-                  </div>
-                </Link>
-                <Link className="flex items-center gap-3">
-                  <div>
-                    <img className="rounded-xl" src={post_3}
-                        alt="" />
-                  </div>
-                  <div>
-                    <h3 className="mb-3 font-Montserrat font-medium text-sm text-text_color">vegan and meet all <br />
-                      your needs?</h3>
-                    <span className="font-Montserrat font-medium text-xs text-[#699C47]">March 02.2022</span>
-                  </div>
-                </Link>
+          <Link to="#" className="flex items-center gap-3">
+            <div>
+              <img className="rounded-xl" src={post_1} alt="" />
+            </div>
+            <div>
+              <h3 className="mb-3 font-Montserrat font-medium text-sm text-text_color">
+                vegan and meet all <br />
+                your needs?
+              </h3>
+              <span className="font-Montserrat font-medium text-xs text-[#699C47]">
+                March 02.2022
+              </span>
+            </div>
+          </Link>
+
+          <Link to="" className="flex items-center gap-3">
+            <div>
+              <img className="rounded-xl" src={post_2} alt="" />
+            </div>
+            <div>
+              <h3 className="mb-3 font-Montserrat font-medium text-sm text-text_color">
+                vegan and meet all <br />
+                your needs?
+              </h3>
+              <span className="font-Montserrat font-medium text-xs text-[#699C47]">
+                March 02.2022
+              </span>
+            </div>
+          </Link>
+          <Link className="flex items-center gap-3">
+            <div>
+              <img className="rounded-xl" src={post_3} alt="" />
+            </div>
+            <div>
+              <h3 className="mb-3 font-Montserrat font-medium text-sm text-text_color">
+                vegan and meet all <br />
+                your needs?
+              </h3>
+              <span className="font-Montserrat font-medium text-xs text-[#699C47]">
+                March 02.2022
+              </span>
+            </div>
+          </Link>
         </div>
       </div>
 
@@ -133,7 +139,7 @@ const RecentPost = () => {
             <img
               className="pt-[100px] w-full h-full ml-5"
               src={lemon}
-              alt=""
+              alt="lemon"
             />
           </div>
         </div>
