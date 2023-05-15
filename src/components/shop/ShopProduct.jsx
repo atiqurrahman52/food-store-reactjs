@@ -1,12 +1,12 @@
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import productData from "../../data/product/productData";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 
 const ShopProduct = () => {
-  const [counter, setCounter] = useState();
-  const [increment, setIncrement] = useState();
-  const [decrement, setDecrement] = useState()
+  //   const [counter, setCounter] = useState();
+  //   const [increment, setIncrement] = useState();
+  //   const [decrement, setDecrement] = useState()
 
   return (
     <div className="container">
