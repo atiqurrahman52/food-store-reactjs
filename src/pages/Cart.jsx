@@ -1,14 +1,13 @@
-import CartBanner from "../components/cart/Cartbanner";
 import MyCart from "../components/cart/MyCart";
-
+import MyCartBanner from "../components/cart/MyCartBanner";
 
 const Cart = () => {
-    return (
-        <div>
-            <CartBanner />
-            <MyCart />
-        </div>
-    );
+  return (
+    <div>
+      <MyCartBanner />
+      <MyCart />
+    </div>
+  );
 };
 
 export default Cart;
