@@ -22,7 +22,7 @@ const Navbar = () => {
   }, []);
   return (
     <div className="sticky top-0 z-20">
-      <div className="py-5 w-full bg-white shadow-[0_0px_22px_rgba(119,119,119,0.19)]">
+      <div className="py-5 w-full bg-white shadow-[0_0px_22px_rgba(119,119,119,0.19)] z-20 relative">
         <div className="container">
           <div className="flex justify-between items-center">
             <Link to="./">
@@ -33,14 +33,14 @@ const Navbar = () => {
               />
             </Link>
             <ul className="hidden md:flex gap-4 md:gap-8">
-             {
-              navbarData.map(({id,title,path}) =>(
-                <li key={id} className="font-Montserrat text-base text-text_color">
+              {navbarData.map(({ id, title, path }) => (
+                <li
+                  key={id}
+                  className="font-Montserrat text-base text-text_color"
+                >
                   <Link to={path}>{title}</Link>
                 </li>
-              ))
-             }
-             
+              ))}
             </ul>
 
             <div className="flex gap-4 md:gap-5">
@@ -72,14 +72,14 @@ const Navbar = () => {
         <div className="fixed menu-list bg-white inset-0 z-10 h-screen w-full">
           <div className="flex items-center justify-center z-10">
             <ul className="gap-4 md:gap-8 space-y-3 mt-28 w-full px-6 z-10">
-             
-              {
-                navbarData.map(({i,title,path}) =>(
-                   <li key={i} className="font-Montserrat border-b w-full text-base text-text_color px-4 p-2.5">
-                    <Link to={path}>{title}</Link> 
-                   </li>
-                ))
-              }
+              {navbarData.map(({ i, title, path }) => (
+                <li
+                  key={i}
+                  className="font-Montserrat border-b w-full text-base text-text_color px-4 p-2.5"
+                >
+                  <Link to={path}>{title}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="p-6 mt-16">

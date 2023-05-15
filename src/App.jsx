@@ -10,6 +10,7 @@ import About from "./pages/About"
 import Shop from "./pages/Shop"
 import Checkout from "./pages/Checkout"
 import BlogDetail from "./pages/BlogDetail"
+import Privacy from "./pages/Privacy"
 
 
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/about" element={<About />}/>
       <Route path="/cart"  element={<Cart />} />
       <Route path="/checkout" element={<Checkout />} />
+      <Route path="/privacy"  element={<Privacy />} />
 
       </Route>
     </Routes>
