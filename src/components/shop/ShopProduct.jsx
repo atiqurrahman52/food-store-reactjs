@@ -1,14 +1,9 @@
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 import productData from "../../data/product/productData";
-// import { useState } from "react";
+
 import ProductCard from "./ProductCard";
 
 const ShopProduct = () => {
-  //   const [counter, setCounter] = useState();
-  //   const [increment, setIncrement] = useState();
-  //   const [decrement, setDecrement] = useState();
-  //   const [quantity, setQuantity] = useState();
-
   return (
     <div className="container">
       <div className="py-8 md:py-10">
