@@ -11,6 +11,8 @@ import Shop from "./pages/Shop"
 import Checkout from "./pages/Checkout"
 import BlogDetail from "./pages/BlogDetail"
 import Privacy from "./pages/Privacy"
+import ProductDetail from "./pages/ProductDetail"
+import Swp from "./components/productDetail/Swp"
 
 
 
@@ -25,11 +27,13 @@ function App() {
       <Route path="/blog-detail/:id" element={<BlogDetail />}/>
       {/* <Route path="/blog-detail" element={<BlogDetail />}/> */}
       <Route path="/shop"  element={<Shop />} />
+      <Route path="/product-detail/:id" element={<ProductDetail />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />}/>
       <Route path="/cart"  element={<Cart />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/privacy"  element={<Privacy />} />
+      <Route path="/swp"  element={<Swp />} />
 
       </Route>
     </Routes>

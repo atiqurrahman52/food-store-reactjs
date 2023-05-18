@@ -13,7 +13,7 @@ const ProductCard = ({ data }) => {
 
   return (
     <div className="border border-[#EBEBEE] overflow-hidden rounded-lg md:rounded-2xl shadow-[0_0px_42px_rgba(119,119,119,0.05)]">
-      <Link to="/product-details">
+      <Link to={`/product-detail/${id}`}>
         <img className="mb-4 xl:mb-[17px] w-full" src={img} alt="" />
       </Link>
 
@@ -97,6 +97,8 @@ const ProductCard = ({ data }) => {
             </div>
           )}
         </div>
+
+
       </div>
     </div>
   );
