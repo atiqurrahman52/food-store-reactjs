@@ -13,6 +13,7 @@ import BlogDetail from "./pages/BlogDetail"
 import Privacy from "./pages/Privacy"
 import ProductDetail from "./pages/ProductDetail"
 import Swp from "./components/productDetail/Swp"
+import NotFound from "./components/notFound/NotFound"
 
 
 
@@ -34,6 +35,7 @@ function App() {
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/privacy"  element={<Privacy />} />
       <Route path="/swp"  element={<Swp />} />
+      <Route path="*" element={<NotFound />} />
 
       </Route>
     </Routes>
