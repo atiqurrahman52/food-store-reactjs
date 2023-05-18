@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import notFound from '../../assets/images/not-found/not-found.webp'
 
 const NotFound = () => {
@@ -11,7 +12,7 @@ const NotFound = () => {
           </div>
          <div className="md:w-max mx-auto">
             <button className="w-full md:w-[308px] h-10 md:h-[56px] bg-primary_3 text-white font-Montserrat font-semibold text-base rounded md:rounded-xl">
-                <a href="../index.html">Back To Home</a>
+                <Link to="/">Back To Home</Link>
               </button>
          </div>
         </div>
