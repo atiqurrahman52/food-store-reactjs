@@ -2,16 +2,60 @@ import { useEffect, useState } from "react";
 import leaf from "../../assets/images/share/leaf.png";
 import productData from "../../data/product/productData";
 import ProductCard from "../shop/ProductCard";
+// import { format, parse, compareDesc, compareAsc } from "date-fns";
+// import moment from "moment";
 
 const FeaturedProduct = () => {
-  const [tabActive, setTabActive] = useState();
+  const [tabActive, setTabActive] = useState("new arrival");
   const [tabData, setTabData] = useState([]);
 
-// const newArrivalData = products.filter(product => product.date)
-const bestSellData = productData.sort((a, b) => b.numberOfSell - a.numberOfSell)
-console.log(bestSellData)
-// const bestSellData = products.filter(product => product.sa)
+  // const newArrivalData = productData.sort(compareAsc);
 
+  // const newArrivalData = productData.sort((a, b) =>
+  //   compareAsc(
+  //     parse(a.dateCreated, "MMMM dd, yyyy", new Date()),
+  //     parse(b.dateCreated, "MMMM dd, yyyy", new Date())
+  //   )
+  // );
+
+  // const newArrivalData = productData.sort((a, b) => {
+  //   const dateA = new Date(a.dateCreated);
+  //   const dateB = new Date(b.dateCreated);
+  //   return dateA - dateB;
+  // });
+
+  // const newArrivalData = productData.sort((a, b) => moment(a.dateCreated, "MMMM DD, YYYY") - moment(b.dateCreated, "MMMM DD, YYYY"));
+
+
+  // console.log(newArrivalData);
+
+  const bestSellData = productData.sort(
+    (a, b) => b.numberOfSell - a.numberOfSell
+  );
+  const featuredData = productData.filter((product) => product.isFeatured);
+
+  useEffect(() => {
+    setTabData(
+      (tabActive === "new arrival" && productData) ||
+        (tabActive === "best sell" && bestSellData) ||
+        (tabActive === "featured" && featuredData)
+    );
+  }, [bestSellData, featuredData]);
+
+  // console.log(newArrivalData.map(item=> item.dateCreated));
+
+  // format(new Date(2014, 1, 11), "MM/dd/yyyy");
+  //=> '02/11/2014'
+
+  // const dates = [
+  //   { dateFF: "May 15, 2023" },
+  //   { dateFF: "March 15, 2023" },
+  //   { dateFF: "February 15, 2023" },
+  // ];
+
+  // dates.sort(compareAsc);
+
+  // console.log(productData.sort(compareAsc));
 
   return (
     <div className="container">
@@ -37,7 +81,9 @@ console.log(bestSellData)
               key={i}
               // className="cursor-pointer current border border-[#EBEBEE] py-2 px-3 xl:px-4 rounded-xl font-Montserrat text-xs xl:text-base text-p_text"
               className={`capitalize cursor-pointer current border border-[#EBEBEE] py-2 px-3 xl:px-4 rounded-xl font-Montserrat text-xs xl:text-base text-p_text
-              ${item === tabActive && "text-primary_3"} `}
+              ${
+                item === tabActive && "text-primary_3 border border-primary_3"
+              } `}
             >
               {item}
             </li>
@@ -46,7 +92,7 @@ console.log(bestSellData)
 
         <div id="tab-1" className="tab-content current">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {productData.map((item, i) => (
+            {tabData.map((item, i) => (
               <ProductCard key={i} data={item} />
             ))}
           </div>

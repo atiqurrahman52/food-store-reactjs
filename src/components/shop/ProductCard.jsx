@@ -17,9 +17,11 @@ const ProductCard = ({ data }) => {
       <Link to={`/product-detail/${id}`}>
         {/* <img className="mb-4 xl:mb-[17px] w-full" src={img} alt="" /> */}
         <div className="relative">
-              <img className="mb-4 xl:mb-[17px] w-full" src={img} alt="" />
-                <span className="absolute flex justify-center items-center top-3 py-2 px-2 right-4 rounded-full bg-white text-xl text-[#D64647]"><Heart size={20} /></span>
-             </div>
+          <img className="mb-4 xl:mb-[17px] w-full" src={img} alt="" />
+          <span className="absolute flex justify-center items-center top-3 py-2 px-2 right-4 rounded-full bg-white text-xl text-[#D64647]">
+            <Heart size={20} />
+          </span>
+        </div>
       </Link>
 
       <div className="p-6 pt-4">
@@ -102,8 +104,6 @@ const ProductCard = ({ data }) => {
             </div>
           )}
         </div>
-
-
       </div>
     </div>
   );
