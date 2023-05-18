@@ -1,3 +1,4 @@
+import { Heart } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -14,7 +15,11 @@ const ProductCard = ({ data }) => {
   return (
     <div className="border border-[#EBEBEE] overflow-hidden rounded-lg md:rounded-2xl shadow-[0_0px_42px_rgba(119,119,119,0.05)]">
       <Link to={`/product-detail/${id}`}>
-        <img className="mb-4 xl:mb-[17px] w-full" src={img} alt="" />
+        {/* <img className="mb-4 xl:mb-[17px] w-full" src={img} alt="" /> */}
+        <div className="relative">
+              <img className="mb-4 xl:mb-[17px] w-full" src={img} alt="" />
+                <span className="absolute flex justify-center items-center top-3 py-2 px-2 right-4 rounded-full bg-white text-xl text-[#D64647]"><Heart size={20} /></span>
+             </div>
       </Link>
 
       <div className="p-6 pt-4">

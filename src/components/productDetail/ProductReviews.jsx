@@ -14,7 +14,7 @@ const ProductReviews = ({ data }) => {
               <li
                 key={i}
                 onClick={() => setTabActive(item)}
-                className={`cursor-pointer font-Montserrat text-base md:text-xl text-p_text 
+                className={`capitalize cursor-pointer font-Montserrat text-base md:text-xl text-p_text 
                     ${i === tabActive && "text-text_color"}`}
               >
                 {item}
@@ -23,9 +23,9 @@ const ProductReviews = ({ data }) => {
             ))}
           </ul>
 
-          <div className="panelContainer border-t  pt-8">
+          <div className="border-t  pt-8">
             {tabActive === "description" ? (
-              <div id="panel1" className="panel">
+              <div>
                 <p className="font-Montserrat text-xs md:text-base text-p_text">
                   {description}
                 </p>
@@ -218,7 +218,7 @@ const ProductReviews = ({ data }) => {
                       <input
                         type=""
                         name=""
-                        value=""
+                       
                         className="bg-[#F5F5F5] rounded-xl h-12 w-full focus:outline-none px-4 py-2"
                       />
                     </div>
@@ -229,7 +229,7 @@ const ProductReviews = ({ data }) => {
                       <input
                         type=""
                         name=""
-                        value=""
+                        
                         className="bg-[#F5F5F5] rounded-xl h-12 w-full focus:outline-none px-4 py-2"
                       />
                     </div>

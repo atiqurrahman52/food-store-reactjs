@@ -224,25 +224,25 @@ const BlogNews = () => {
               </button>
               <div>
                 <a
-                  className="bg-[#EDEDE3] text-primary_3 py-1 md:py-2 px-2 md:px-3 rounded-lg"
+                  className="cursor-pointer bg-[#EDEDE3] text-primary_3 py-1 md:py-2 px-2 md:px-3 rounded-lg"
                   to="#"
                 >
                   1
                 </a>
                 <a
-                  className="font-Montserrat font-medium text-xs md:text-sm py-1 md:py-2 px-2 md:px-3 text-p_text"
+                  className="cursor-pointer font-Montserrat font-medium text-xs md:text-sm py-1 md:py-2 px-2 md:px-3 text-p_text"
                   to="#"
                 >
                   2
                 </a>
                 <a
-                  className="font-Montserrat font-medium text-xs md:text-sm py-1 md:py-2 px-2 md:px-3 text-p_text"
+                  className="cursor-pointer font-Montserrat font-medium text-xs md:text-sm py-1 md:py-2 px-2 md:px-3 text-p_text"
                   to="#"
                 >
                   ...
                 </a>
                 <a
-                  className="font-Montserrat font-medium text-xs md:text-sm py-1 md:py-2 px-2 md:px-3 text-p_text"
+                  className="cursor-pointer font-Montserrat font-medium text-xs md:text-sm py-1 md:py-2 px-2 md:px-3 text-p_text"
                   to="#"
                 >
                   6

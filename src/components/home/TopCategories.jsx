@@ -4,7 +4,7 @@ import topCategoriesData from "../../data/home/topCategoriesData";
 const TopCategories = () => {
   return (
     <div className="container">
-      <div className="py-[77px] xl:py-[83px]">
+      <div className="py-2 xl:py-[83px]">
         <div className="flex flex-col justify-center items-center mb-8">
           <div className="relative">
             <img src={leaf} alt="" />
@@ -22,7 +22,7 @@ const TopCategories = () => {
           {topCategoriesData.map(({ id, name, quantity, icon }) => (
             <div
               key={id}
-              className="w-[140px] xl:w-[166px] categories group hover:bg-primary_3 bg-[#EEF2F3] rounded-2xl p-2.5 xl:p-4 flex flex-col justify-center items-center"
+              className="w-[140px] xl:w-[166px] min-h-[170px] categories group hover:bg-primary_3 bg-[#EEF2F3] rounded-2xl p-2.5 xl:p-4 flex flex-col justify-center items-center"
             >
               <span className="mb-2 xl:mb-4 pt-2 xl:pt-4">{icon}</span>
               <h5 className="text-center mb-2 xl:mb-2.5 font-Montserrat font-medium text-sm xl:text-base group-hover:text-white text-text_color">

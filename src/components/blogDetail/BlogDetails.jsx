@@ -270,7 +270,7 @@ const BlogDetails = ({data}) => {
               </div>
 
               <div className="flex justify-between mt-3 md:mt-6 mb-2">
-                <div className="flex items-center gap-3">
+                <button className="flex items-center gap-3">
                   <span>
                     <svg
                       width="20"
@@ -291,9 +291,9 @@ const BlogDetails = ({data}) => {
                   <span className="font-Montserrat font-semibold text-xs md:text-[15px] text-text_color">
                     Previous
                   </span>
-                </div>
+                </button>
 
-                <div className="flex items-center gap-3">
+                <button className="flex items-center gap-3">
                   <span className="font-Montserrat font-semibold text-xs md:text-[15px] text-text_color">
                     Next
                   </span>
@@ -314,7 +314,7 @@ const BlogDetails = ({data}) => {
                       />
                     </svg>
                   </span>
-                </div>
+                </button>
               </div>
 
               <div className="flex justify-between">

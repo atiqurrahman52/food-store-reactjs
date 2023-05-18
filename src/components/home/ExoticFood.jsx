@@ -27,7 +27,7 @@ const ExoticFood = () => {
                     <p className="font-Montserrat font-medium text-sm md:text-base text-white mb-4 md:mb-3">
                       {title}
                     </p>
-                    <div className="flex justify-between rounded-b-lg">
+                    <div className="flex gap-4">
                       <div className="flex space-x-2">
                         <span className="w-3 md:w-5 h-3 md:h-5">
                           {calendar}

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import cartData from "../../data/cart/cartData";
+import { CaretLeft } from "@phosphor-icons/react";
 
 
 const MyCart = () => {
@@ -108,7 +109,15 @@ const MyCart = () => {
                       <Link to="/checkout">
                         <button className="w-[248px] md:w-[308px] h-[37px] md:h-11 bg-primary_3 rounded-lg font-Montserrat font-semibold text-sm md:text-base text-white">Proceed to Checkout</button>
                       </Link>
+
+                    
                   </div>
+                  <div className="pt-6">
+                <Link to="/shop" className="flex items-center justify-center w-full h-10 md:h-12 gap-[10px] border rounded-lg">
+                <CaretLeft size={20} />
+                  <span className="font-Montserrat font-medium text-sm md:text-base text-p_text">Continue Shopping</span>
+                </Link>
+               </div>
                   
                 </div>
               </div>
