@@ -5,7 +5,7 @@ import {
   UserCircle,
   X,
 } from "@phosphor-icons/react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo/logo-1.webp";
 import { useEffect, useState } from "react";
 import navbarData from "../../data/navigation/navbarData";
@@ -36,9 +36,12 @@ const Navbar = () => {
               {navbarData.map(({ id, title, path }) => (
                 <li
                   key={id}
-                  className="font-Montserrat text-base text-text_color"
+                 
                 >
-                  <Link to={path}>{title}</Link>
+                  
+                  <NavLink to={path} className="nav-link font-Montserrat text-base text-text_color">
+                    {title}
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -75,9 +78,10 @@ const Navbar = () => {
               {navbarData.map(({ i, title, path }) => (
                 <li
                   key={i}
-                  className="font-Montserrat border-b w-full text-base text-text_color px-4 p-2.5"
+                  className="font-Montserrat border-b w-full text-base text-text_color md:px-4 p-2.5"
                 >
-                  <Link to={path}>{title}</Link>
+                  
+                  <NavLink to={path} className="nav-link">{title}</NavLink>
                 </li>
               ))}
             </ul>

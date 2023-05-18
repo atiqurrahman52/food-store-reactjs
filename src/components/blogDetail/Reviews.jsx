@@ -227,12 +227,12 @@ const Reviews = () => {
                   </div>
                   <div>
                     <label className="font-Montserrat text-xs md:text-base text-p_text block mb-4">Name</label>
-                    <input type="" name="" value=""
+                    <input type="" name="" 
                       className="bg-[#F5F5F5] rounded-xl h-12 w-full focus:outline-none px-4 py-2" />
                   </div>
                   <div>
                     <label className="font-Montserrat text-xs md:text-base text-p_text block mb-4">Email</label>
-                    <input type="" name="" value=""
+                    <input type="" name=""
                       className="bg-[#F5F5F5] rounded-xl h-12 w-full focus:outline-none px-4 py-2" />
                   </div>
                   <button
