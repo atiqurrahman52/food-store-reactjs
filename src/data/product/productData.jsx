@@ -16,7 +16,7 @@ const productData = [
     dateCreated: "May 23, 2023",
     numberOfSell: 12,
     isFeatured: true,
-    rating: 4,
+    rating: 3,
     originalPrice: 56.99,
     discountPrice: 76.99,
     description:
@@ -45,7 +45,7 @@ const productData = [
     dateCreated: "May 1, 2022",
     numberOfSell: 20,
     isFeatured: false,
-    rating: 4,
+    rating: 5,
     originalPrice: 56.99,
     discountPrice: 76.99,
     description:
@@ -88,7 +88,7 @@ const productData = [
     dateCreated: "May 23, 2023",
     numberOfSell: 12,
     isFeatured: true,
-    rating: 4,
+    rating: 3.5,
     originalPrice: 56.99,
     discountPrice: 76.99,
     description:

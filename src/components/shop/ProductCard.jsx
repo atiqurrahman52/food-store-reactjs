@@ -15,7 +15,6 @@ const ProductCard = ({ data }) => {
   return (
     <div className="border border-[#EBEBEE] overflow-hidden rounded-lg md:rounded-2xl shadow-[0_0px_42px_rgba(119,119,119,0.05)]">
       <Link to={`/product-detail/${id}`}>
-        {/* <img className="mb-4 xl:mb-[17px] w-full" src={img} alt="" /> */}
         <div className="relative">
           <img className="mb-4 xl:mb-[17px] w-full" src={img} alt="" />
           <span className="absolute flex justify-center items-center top-3 py-2 px-2 right-4 rounded-full bg-white text-xl text-[#D64647]">
@@ -47,11 +46,7 @@ const ProductCard = ({ data }) => {
               Add to cart
             </button>
           ) : (
-            <div
-              className="btn-group counter-btn flex justify-between items-center px-8 w-full h-full bg-primary_3 text-white"
-              role="group"
-              aria-label="Basic outlined example"
-            >
+            <div className="btn-group counter-btn flex justify-between items-center px-8 w-full h-full bg-primary_3 text-white">
               <button
                 onClick={() =>
                   setProductCount(

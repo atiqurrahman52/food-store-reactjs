@@ -5,10 +5,13 @@ import mastercard from '../../assets/images/checkout/Mastercard.svg';
 import stripe from '../../assets/images/checkout/Stripe.svg';
 import paypal from '../../assets/images/checkout/PayPal.svg';
 import gPay from '../../assets/images/checkout/GooglePay.svg';
+import { useState } from "react";
 
 const ProductDescription = ({ data }) => {
+  const [quantity, setQuantity] = useState(0);
   const {
     productName,
+    rating,
     originalPrice,
     discountPrice,
     description,
@@ -67,7 +70,7 @@ const ProductDescription = ({ data }) => {
                   {productName}
                 </h3>
                 <div className="flex items-center gap-3 mb-5">
-                  rating
+                 {rating}
                   <div>
                     <span>( 4 Customer Review )</span>
                   </div>
@@ -91,7 +94,10 @@ const ProductDescription = ({ data }) => {
 
               <div className="flex gap-5 pt-5 mb-5">
                 <div className="w-[131px] md:w-[119px] h-[38px] md:h-11 border rounded-lg flex justify-between px-4">
-                  <button className="counter__decrement">
+
+                  <button
+                   onClick={() => setQuantity( quantity > 0 ? quantity - 1 : quantity)}
+                  >
                     <svg
                       width="18"
                       height="18"
@@ -108,13 +114,11 @@ const ProductDescription = ({ data }) => {
                       />
                     </svg>
                   </button>
-                  <input
-                    type=""
-                    name=""
-                    value="0"
-                    className="counter__input w-5 md:h-10 ml-3 focus:outline-none"
-                  />
-                  <button className="counter__increment">
+                
+                  <p className="pt-2">{quantity}</p>
+                  <button 
+                  onClick={() => setQuantity( quantity + 1)}
+                  >
                     <svg
                       width="18"
                       height="18"
@@ -131,6 +135,7 @@ const ProductDescription = ({ data }) => {
                       />
                     </svg>
                   </button>
+
                 </div>
                 <div>
                   <button className="bg-primary_3 w-[129px] md:w-[151px] h-[38px] md:h-11 font-Montserrat font-medium text-xs md:text-base text-white rounded-xl">

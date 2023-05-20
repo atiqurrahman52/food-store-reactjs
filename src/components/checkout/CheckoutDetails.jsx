@@ -275,7 +275,7 @@ const CheckoutDetails = () => {
                     className="accent-primary_3"
                     type="radio"
                     id="Cash"
-                    name="Cash"
+                    name="payment"
                     value="Cash"
                   />
                   <label
@@ -340,7 +340,7 @@ const CheckoutDetails = () => {
                     className="accent-primary_3"
                     type="radio"
                     id="paypal"
-                    name="paypal"
+                    name="payment"
                     value="paypal"
                   />
                   <label
