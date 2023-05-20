@@ -117,7 +117,7 @@ const ShopProduct = () => {
           >
             <span
               onClick={() => setShowDropdown(true)}
-              className="flex justify-between items-center gap-3 text-xs md:text-sm text-primary border border-[#9DA6BA] px-2 py-3 rounded-md"
+              className="flex justify-between items-center gap-3 text-xs md:text-sm  px-2 py-3shadow-md  bg-[#F5F5F5]rounded-md"
             >
               <span className="text-[#9DA6BA] text-xs xl:text-lg leading-6">
                 Sort by
@@ -137,7 +137,7 @@ const ShopProduct = () => {
                   <li
                   key={i}
                     onClick={() => handleDropdown(item)}
-                    className="hover:bg-yellow-500 hover:text-white text-[#5C727D] text-xs md:text-sm flex items-start py-[9px] px-4"
+                    className="hover:bg-green-500 hover:text-white text-[#5C727D] text-xs md:text-sm flex items-start py-[9px] px-4"
                   >
                     {item}
                   </li>
