@@ -6,6 +6,7 @@ import stripe from '../../assets/images/checkout/Stripe.svg';
 import paypal from '../../assets/images/checkout/PayPal.svg';
 import gPay from '../../assets/images/checkout/GooglePay.svg';
 import { useState } from "react";
+import Star from "./Star";
 
 const ProductDescription = ({ data }) => {
   const [quantity, setQuantity] = useState(0);
@@ -70,7 +71,8 @@ const ProductDescription = ({ data }) => {
                   {productName}
                 </h3>
                 <div className="flex items-center gap-3 mb-5">
-                 {rating}
+                 {/* {rating} */}
+                  <div className="cursor-pointer"> <Star rating ={rating} /></div>
                   <div>
                     <span>( 4 Customer Review )</span>
                   </div>

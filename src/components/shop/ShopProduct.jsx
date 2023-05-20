@@ -1,9 +1,19 @@
-import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import { ArrowLeft, ArrowRight, CaretDown } from "@phosphor-icons/react";
 import productData from "../../data/product/productData";
 
 import ProductCard from "./ProductCard";
+import { useState } from "react";
 
 const ShopProduct = () => {
+
+  const [showDropdown, setShowDropdown] = useState(false);
+  const [selectDropdown, setSelectDropdown] = useState("Popular");
+  const value = ["Highest Rated", "Newest", "Most Selling"];
+  const handleDropdown = (item) => {
+    setSelectDropdown(item);
+    setShowDropdown(false);
+    console.log(showDropdown);
+  };
   return (
     <div className="container">
       <div className="py-8 md:py-10">
@@ -57,7 +67,7 @@ const ShopProduct = () => {
             </div>
           </div>
 
-          <div className="relative">
+          {/* <div className="relative">
             <button className="short-btn flex items-center justify-betwee space-x-7 md:space-x-[116px] bg-[#F5F5F5] py-2 md:py-[11px] px-3 md:px-6 rounded md:rounded-2xl">
               <h2 className="font-NotoSans text-xs md:text-base text-text_color">
                 Short By
@@ -98,7 +108,44 @@ const ShopProduct = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
+
+<button
+            type="button"
+            className="relative"
+            onBlur={() => setShowDropdown(false)}
+          >
+            <span
+              onClick={() => setShowDropdown(true)}
+              className="flex justify-between items-center gap-3 text-xs md:text-sm text-primary border border-[#9DA6BA] px-2 py-3 rounded-md"
+            >
+              <span className="text-[#9DA6BA] text-xs xl:text-lg leading-6">
+                Sort by
+              </span>
+              {selectDropdown}
+              <CaretDown
+                size={18}
+                className={showDropdown ? "rotate-180" : ""}
+              />
+            </span>
+
+            {/* dropdown */}
+            {showDropdown && (
+              // <ul className="absolute min-w-[195px] bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
+              <ul className="absolute  bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
+                {value.map((item,i) => (
+                  <li
+                  key={i}
+                    onClick={() => handleDropdown(item)}
+                    className="hover:bg-yellow-500 hover:text-white text-[#5C727D] text-xs md:text-sm flex items-start py-[9px] px-4"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </button>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
