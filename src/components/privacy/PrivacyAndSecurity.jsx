@@ -10,7 +10,6 @@ const PrivacyAndSecurity = () => {
   }, [tabActive, data]);
   const { items } = data;
 
-
   return (
     <div className="py-10">
       <div className="container">
@@ -19,8 +18,8 @@ const PrivacyAndSecurity = () => {
             <li
               key={id}
               onClick={() => setTabActive(id)}
-              className={`cursor-pointer font-Montserrat font-medium text-base text-[#A3C5E3] ${
-                id === tabActive && "text-[#0077E5]"
+              className={`cursor-pointer font-Montserrat font-medium text-base ${
+                id === tabActive ? "text-[#0077E5]" : "text-[#A3C5E3]"
               } `}
             >
               {header}
@@ -28,20 +27,18 @@ const PrivacyAndSecurity = () => {
           ))}
         </ul>
 
-        
-          <div>
-            {items.map(({ id, title, description }) => (
-              <div key={id} className="mb-10 md:mb-20">
-                <h3 className="font-Montserrat font-medium text-lg md:text-[32px] text-text_color mb-6">
-                  {title}
-                </h3>
-                <p className="font-Montserrat text-xs md:text-base text-p_text">
-                  {description}
-                </p>
-              </div>
-            ))}
-          </div>
-       
+        <div>
+          {items.map(({ id, title, description }) => (
+            <div key={id} className="mb-10 md:mb-20">
+              <h3 className="font-Montserrat font-medium text-lg md:text-[32px] text-text_color mb-6">
+                {title}
+              </h3>
+              <p className="font-Montserrat text-xs md:text-base text-p_text">
+                {description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

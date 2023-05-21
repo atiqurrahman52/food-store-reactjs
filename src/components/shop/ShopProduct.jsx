@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, CaretDown } from "@phosphor-icons/react";
+import { ArrowLeft, ArrowRight, CaretDown, Plus } from "@phosphor-icons/react";
 import productData from "../../data/product/productData";
 
 import ProductCard from "./ProductCard";
@@ -17,6 +17,7 @@ const ShopProduct = () => {
     <div className="container">
       <div className="py-8 md:py-10">
         <div className="flex justify-between mb-6">
+
           <div className="relative">
             <button className="categories-btn flex items-center justify-betwee space-x-7 md:space-x-[116px] bg-[#F5F5F5] py-2 md:py-[11px] px-3 md:px-6 rounded md:rounded-2xl">
               <h2 className="font-NotoSans text-xs md:text-base text-text_color">
@@ -65,6 +66,40 @@ const ShopProduct = () => {
               </div>
             </div>
           </div>
+
+          
+{/* <button
+            type="button"
+            className="relative"
+            onBlur={() => setShowDropdown(false)}
+          >
+            <span
+              onClick={() => setShowDropdown(true)}
+              className="flex justify-between items-center gap-3 text-xs md:text-sm  px-3 py-3 bg-[#F5F5F5] rounded-xl"
+            >
+              <span className="text-text_color text-xs md:text-base">
+              Categories
+              </span>
+              {selectDropdown}
+              
+              <Plus size={20} />
+            </span>
+
+            {showDropdown && (
+              
+              <ul className="absolute  bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
+                {value.map((item, i) => (
+                  <li
+                    key={i}
+                    onClick={() => handleDropdown(item)}
+                    className="hover:bg-green-500 hover:text-white text-[#5C727D] text-xs md:text-sm flex items-start py-[9px] px-4"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </button> */}
 
          
 
