@@ -145,7 +145,7 @@ const ShopProduct = () => {
             {/* dropdown */}
             {showDropdown && (
               // <ul className="absolute min-w-[195px] bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
-              <ul className="absolute  bg-white border border-red-600 max-w-[204px] z-20  right-0 shadow-md rounded-md mt-[10px]">
+              <ul className="absolute  bg-white  max-w-[204px] z-20  right-0 shadow-md rounded-md mt-[10px]">
                 {value.map((item, i) => (
                   <li
                     key={i}
