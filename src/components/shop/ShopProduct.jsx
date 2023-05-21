@@ -6,18 +6,33 @@ import { useState } from "react";
 
 const ShopProduct = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const [selectDropdown, setSelectDropdown] = useState("Popular");
+  const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+  // const [selectDropdown, setSelectDropdown] = useState("Popular");
+  const [selectDropdown, setSelectDropdown] = useState("");
+  const [selectCategoryDropdown, setselectCategoryDropdown] = useState("");
   const value = ["Highest Rated", "Newest", "Most Selling"];
+  const category = ["Meat & Fish", "Grocery", "Bread & Bakery", "Fruits", "Vegetable", "Breakfast & Dairy"];
   const handleDropdown = (item) => {
     setSelectDropdown(item);
     setShowDropdown(false);
-    console.log(showDropdown);
+    console.log("MY DROPDOWN",showDropdown);
   };
+  const handleCategoryDropdown = (item) => {
+    setselectCategoryDropdown(item);
+    setShowCategoryDropdown(false);
+    console.log("MY showCategoryDropdown",showCategoryDropdown);
+  };
+
+ 
+
+
   return (
     <div className="container">
       <div className="py-8 md:py-10">
         <div className="flex justify-between mb-6">
 
+      
+{/* 
           <div className="relative">
             <button className="categories-btn flex items-center justify-betwee space-x-7 md:space-x-[116px] bg-[#F5F5F5] py-2 md:py-[11px] px-3 md:px-6 rounded md:rounded-2xl">
               <h2 className="font-NotoSans text-xs md:text-base text-text_color">
@@ -65,52 +80,57 @@ const ShopProduct = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           
-{/* <button
-            type="button"
+
+          <button
+          
             className="relative"
-            onBlur={() => setShowDropdown(false)}
+            onBlur={() => setShowCategoryDropdown(false)}
           >
-            <span
-              onClick={() => setShowDropdown(true)}
-              className="flex justify-between items-center gap-3 text-xs md:text-sm  px-3 py-3 bg-[#F5F5F5] rounded-xl"
+            <div
+              onClick={() => setShowCategoryDropdown(true)}
+              className="flex justify-between items-center gap-1 md:gap-0 text-xs md:text-sm px-2 md:px-3 py-1 md:py-3 md:w-[204px] h-10 md:h-12 bg-[#F5F5F5] rounded-md md:rounded-xl"
             >
               <span className="text-text_color text-xs md:text-base">
               Categories
               </span>
-              {selectDropdown}
-              
-              <Plus size={20} />
-            </span>
+              {selectCategoryDropdown}
+              {/* <CaretDown
+                size={18}
+                className={showDropdown ? "rotate-180" : ""}
+              /> */}
+              {/* <Plus size={20} /> */}
+            </div>
 
-            {showDropdown && (
-              
-              <ul className="absolute  bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
-                {value.map((item, i) => (
+            {/* dropdown */}
+            {showCategoryDropdown && (
+              // <ul className="absolute min-w-[195px] bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
+              <ul className="absolute  bg-[#F5F5F5] max-w-[204px] z-20  right-0 shadow-[0_4px_15px_rgba(136,136,136,0.21)] rounded-md mt-[10px]">
+                {category.map((item, i) => (
                   <li
                     key={i}
-                    onClick={() => handleDropdown(item)}
-                    className="hover:bg-green-500 hover:text-white text-[#5C727D] text-xs md:text-sm flex items-start py-[9px] px-4"
+                    onClick={() => handleCategoryDropdown(item)}
+                    className="hover:bg-green-500 hover:text-white text-p_text text-xs md:text-sm flex items-start py-[9px] px-2 md:px-4"
                   >
                     {item}
                   </li>
                 ))}
               </ul>
             )}
-          </button> */}
+          </button>
 
          
 
           <button
-            type="button"
+          
             className="relative"
             onBlur={() => setShowDropdown(false)}
           >
-            <span
+            <div
               onClick={() => setShowDropdown(true)}
-              className="flex justify-between items-center gap-3 text-xs md:text-sm  px-3 py-3 bg-[#F5F5F5] rounded-xl"
+              className="flex justify-between items-center gap-3 text-xs md:text-sm px-2 md:px-3 py-1 md:py-3 md:w-[204px] h-10 md:h-12 bg-[#F5F5F5] rounded-md md:rounded-xl"
             >
               <span className="text-text_color text-xs md:text-base">
                 Sort by
@@ -120,12 +140,12 @@ const ShopProduct = () => {
                 size={18}
                 className={showDropdown ? "rotate-180" : ""}
               />
-            </span>
+            </div>
 
             {/* dropdown */}
             {showDropdown && (
               // <ul className="absolute min-w-[195px] bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
-              <ul className="absolute  bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
+              <ul className="absolute  bg-white border border-red-600 max-w-[204px] z-20  right-0 shadow-md rounded-md mt-[10px]">
                 {value.map((item, i) => (
                   <li
                     key={i}
@@ -138,6 +158,7 @@ const ShopProduct = () => {
               </ul>
             )}
           </button>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
