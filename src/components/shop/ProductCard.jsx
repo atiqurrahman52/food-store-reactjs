@@ -34,7 +34,7 @@ const ProductCard = ({ data }) => {
           ${price}
         </p>
 
-        <div className="mx-auto rounded-xl w-[256px] xl:w-[308px] h-10 xl:h-12 overflow-hidden">
+        <div className="mx-auto rounded-xl w-full xl:w-[308px] h-10 xl:h-12 overflow-hidden">
           {!addCart ? (
             <button
               onClick={() => {

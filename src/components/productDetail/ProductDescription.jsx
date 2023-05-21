@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Swp from "./Swp";
+
 import visa from '../../assets/images/checkout/visa-logo.svg';
 import mastercard from '../../assets/images/checkout/Mastercard.svg';
 import stripe from '../../assets/images/checkout/Stripe.svg';
@@ -7,6 +7,7 @@ import paypal from '../../assets/images/checkout/PayPal.svg';
 import gPay from '../../assets/images/checkout/GooglePay.svg';
 import { useState } from "react";
 import Star from "./Star";
+import ProductImages from "./ProductImages";
 
 const ProductDescription = ({ data }) => {
   const [quantity, setQuantity] = useState(0);
@@ -18,6 +19,7 @@ const ProductDescription = ({ data }) => {
     description,
     category,
     tags,
+    img,
   } = data;
 
   return (
@@ -26,44 +28,7 @@ const ProductDescription = ({ data }) => {
         <div className="py-16 md:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[22px]">
             <div>
-              {/* <div className="swiper mySwiper2">
-                  <div className="swiper-wrapper">
-                    <div className="swiper-slide bg-[#F5F5F5] rounded-3xl">
-                      <img className="w-full h-full pt-6 md:pt-[35px] pb-[14px] md:pb-6 px-[45px] md:px-[86px]"
-                        src="../assets/images/product-details/slide-large-1.webp" alt="" />
-                    </div>
-                    <div className="swiper-slide bg-[#F5F5F5] rounded-3xl">
-                      <img className="w-full h-full pt-6 md:pt-[35px] pb-[14px] md:pb-6 px-[45px] md:px-[86px]"
-                        src="../assets/images/product-details/slide-large-1.webp" alt="" />
-                    </div>
-                    <div className="swiper-slide bg-[#F5F5F5] rounded-3xl">
-                      <img className="w-full h-full pt-6 md:pt-[35px] pb-[14px] md:pb-6 px-[45px] md:px-[86px]"
-                        src="../assets/images/product-details/slide-large-1.webp" alt="" />
-                    </div>
-    
-                  </div>
-                 
-                </div>
-                <div thumbsSlider="" className="swiper mySwiper mt-6">
-                  <div className="swiper-wrapper mt-5">
-                    <div className="swiper-slide bg-[#F5F5F5] rounded-xl border border-primary_3 h-[166px]">
-                      <img className="w-full h-[74px] md:h-[140px] py-2 md:py-3 px-3 md:px-6"
-                        src="../assets/images/product-details/slide-small-1.webp" alt="" />
-                    </div>
-                    <div className="swiper-slide bg-[#F5F5F5] rounded-xl border border-primary_3 h-[166px]">
-                      <img className="w-full h-[74px] md:h-[140px] py-2 md:py-3 px-3 md:px-6"
-                        src="../assets/images/product-details/slide-small-2.webp" alt="" />
-                    </div>
-                    <div className="swiper-slide bg-[#F5F5F5] rounded-xl border border-primary_3 h-[166px]">
-                      <img className="w-full h-[74px] md:h-[140px] py-2 md:py-3 px-3 md:px-6"
-                        src="../assets/images/product-details/slide-small-3.webp" alt="" />
-                    </div>
-    
-                  </div>
-                  <div className="swiper-pagination"></div>
-                </div> */}
-
-              <Swp />
+              <ProductImages data={data} />
             </div>
             <div>
               <div>

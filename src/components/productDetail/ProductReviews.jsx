@@ -11,15 +11,29 @@ const ProductReviews = ({ data }) => {
         <div className="tabbedPanels">
           <ul className="tabs flex justify-center gap-5 pb-3">
             {["description", "reviews"].map((item, i) => (
-              <li
+
+              // <li
+              //   key={i}
+              //   onClick={() => setTabActive(item)}
+              //   className={`capitalize cursor-pointer font-Montserrat text-base md:text-xl text-p_text 
+              //       ${i === tabActive && "text-text_color"}`}
+              // >
+              //   {item}
+              //   {i === 1 && `(${reviews?.length})`}
+              // </li>
+                  
+
+                  <li
                 key={i}
                 onClick={() => setTabActive(item)}
-                className={`capitalize cursor-pointer font-Montserrat text-base md:text-xl text-p_text 
-                    ${i === tabActive && "text-text_color"}`}
+                className={`capitalize cursor-pointer font-Montserrat text-base md:text-xl 
+                    ${item === tabActive ? "text-text_color font-semibold" :"text-p_text"}`}
               >
                 {item}
                 {i === 1 && `(${reviews?.length})`}
               </li>
+
+              
             ))}
           </ul>
 

@@ -12,6 +12,7 @@ const productData = [
   {
     id: 0,
     img: banana,
+    gallery: [banana,banana,banana,banana,banana],
     productName: "Vegan Thai Banana",
     dateCreated: "May 23, 2023",
     numberOfSell: 12,
@@ -41,6 +42,7 @@ const productData = [
   {
     id: 1,
     img: cucumber,
+    gallery: [cucumber,cucumber,cucumber,cucumber,cucumber],
     productName: "Fresh Cucumber",
     dateCreated: "May 1, 2022",
     numberOfSell: 20,
@@ -84,6 +86,7 @@ const productData = [
   {
     id: 2,
     img: pepper,
+    gallery: [pepper,pepper,pepper,pepper,pepper],
     productName: "Red Capsicum",
     dateCreated: "May 23, 2023",
     numberOfSell: 12,
@@ -120,6 +123,7 @@ const productData = [
   {
     id: 3,
     img: grape,
+    gallery: [grape,grape,grape,grape,grape],
     productName: "Juicy Grapes",
     dateCreated: "May 19, 2023",
     numberOfSell: 22,
@@ -156,6 +160,7 @@ const productData = [
   {
     id: 4,
     img: pineApple,
+    gallery: [pineApple,pineApple,pineApple,pineApple,pineApple],
     productName: "Pine Apple",
     dateCreated: "March 23, 2023",
     numberOfSell: 27,
@@ -192,6 +197,9 @@ const productData = [
   {
     id: 5,
     img: coconut,
+    gallery: [
+      coconut, coconut, coconut, coconut, coconut
+    ],
     productName: "Fresh Coconut",
     dateCreated: "March 17, 2023",
     numberOfSell: 20,
@@ -228,6 +236,7 @@ const productData = [
   {
     id: 6,
     img: broccoli,
+    gallery: [broccoli,broccoli,broccoli,broccoli,broccoli],
     productName: "Organic Broccoli Sliced",
     dateCreated: "March 15, 2023",
     numberOfSell: 8,
@@ -264,6 +273,7 @@ const productData = [
   {
     id: 7,
     img: carrot,
+    gallery: [carrot,carrot,carrot,carrot,carrot],
     productName: "Vegan Red Carrot",
     dateCreated: "May 13, 2023",
     numberOfSell: 10,
@@ -300,6 +310,7 @@ const productData = [
   {
     id: 8,
     img: bean,
+    gallery: [bean, bean, bean, bean, bean],
     productName: "Vegan Green Bean",
     dateCreated: "May 23, 2023",
     numberOfSell: 2,
