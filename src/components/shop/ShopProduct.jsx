@@ -5,7 +5,6 @@ import ProductCard from "./ProductCard";
 import { useState } from "react";
 
 const ShopProduct = () => {
-
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectDropdown, setSelectDropdown] = useState("Popular");
   const value = ["Highest Rated", "Newest", "Most Selling"];
@@ -67,59 +66,18 @@ const ShopProduct = () => {
             </div>
           </div>
 
-          {/* <div className="relative">
-            <button className="short-btn flex items-center justify-betwee space-x-7 md:space-x-[116px] bg-[#F5F5F5] py-2 md:py-[11px] px-3 md:px-6 rounded md:rounded-2xl">
-              <h2 className="font-NotoSans text-xs md:text-base text-text_color">
-                Short By
-              </h2>
-              <span>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M8.35258 10.8541C8.25883 10.9477 8.13175 11.0003 7.99925 11.0003C7.86675 11.0003 7.73966 10.9477 7.64591 10.8541L2.64591 5.85409C2.55759 5.7593 2.50951 5.63394 2.5118 5.50441C2.51408 5.37487 2.56656 5.25128 2.65817 5.15967C2.74977 5.06806 2.87336 5.01559 3.0029 5.0133C3.13243 5.01102 3.2578 5.0591 3.35258 5.14742L7.99925 9.79409L12.6459 5.14742C12.6917 5.0983 12.7469 5.05889 12.8082 5.03157C12.8696 5.00424 12.9358 4.98954 13.0029 4.98836C13.07 4.98717 13.1367 4.99952 13.199 5.02467C13.2612 5.04982 13.3178 5.08725 13.3653 5.13473C13.4128 5.18221 13.4502 5.23876 13.4753 5.30102C13.5005 5.36328 13.5128 5.42997 13.5116 5.4971C13.5105 5.56424 13.4958 5.63045 13.4684 5.69178C13.4411 5.75311 13.4017 5.80831 13.3526 5.85409L8.35258 10.8541Z"
-                    fill="black"
-                  />
-                </svg>
-              </span>
-            </button>
+         
 
-            <div className="short-dropdown hidden absolute pt-[14px] lg:pt-[15px] right-0 z-10">
-              <div className="bg-white p-4 w-[261px] h-auto right-0 border rounded-lg">
-                <div className="space-y-4">
-                  <p className="font-Montserrat text-sm md:text-base text-p_text cursor-pointer">
-                    Terms of service
-                  </p>
-                  <p className="font-Montserrat text-sm md:text-base text-p_text cursor-pointer">
-                    Privacy Policy
-                  </p>
-                  <p className="font-Montserrat text-sm md:text-base text-p_text cursor-pointer">
-                    Returns Policy
-                  </p>
-                  <p className="font-Montserrat text-sm md:text-base text-p_text cursor-pointer">
-                    Delivery & payment
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
-<button
+          <button
             type="button"
             className="relative"
             onBlur={() => setShowDropdown(false)}
           >
             <span
               onClick={() => setShowDropdown(true)}
-              className="flex justify-between items-center gap-3 text-xs md:text-sm  px-2 py-3shadow-md  bg-[#F5F5F5]rounded-md"
+              className="flex justify-between items-center gap-3 text-xs md:text-sm  px-3 py-3 bg-[#F5F5F5] rounded-xl"
             >
-              <span className="text-[#9DA6BA] text-xs xl:text-lg leading-6">
+              <span className="text-text_color text-xs md:text-base">
                 Sort by
               </span>
               {selectDropdown}
@@ -133,9 +91,9 @@ const ShopProduct = () => {
             {showDropdown && (
               // <ul className="absolute min-w-[195px] bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
               <ul className="absolute  bg-white z-20  right-0 shadow-md rounded-md mt-[10px]">
-                {value.map((item,i) => (
+                {value.map((item, i) => (
                   <li
-                  key={i}
+                    key={i}
                     onClick={() => handleDropdown(item)}
                     className="hover:bg-green-500 hover:text-white text-[#5C727D] text-xs md:text-sm flex items-start py-[9px] px-4"
                   >
@@ -145,7 +103,6 @@ const ShopProduct = () => {
               </ul>
             )}
           </button>
-
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
