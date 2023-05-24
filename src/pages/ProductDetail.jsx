@@ -25,6 +25,7 @@ const ProductDetail = () => {
       <ProductDescription data={data} />
       <ProductReviews data={data} />
       <RelatedProduct data={relatedProducts} />
+      
     </div>
   );
 };

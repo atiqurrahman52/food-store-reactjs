@@ -6,8 +6,9 @@ import blogData from "../data/blog/blogData";
 
 const BlogDetail = () => {
    const {id} = useParams();
-//    const singleBlog = blogData?.find((item) => item.id === parseInt(id));
+
 const singleBlog = blogData?.find((item) => item.id === parseInt (id));
+console.log('My Single Blog', singleBlog);
     return (
         <div>
           <BlogDetailBanner />

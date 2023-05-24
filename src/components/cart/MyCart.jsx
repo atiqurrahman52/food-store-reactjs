@@ -12,8 +12,8 @@ const MyCart = () => {
             Shopping Cart
           </p>
           <div className="space-y-3">
-            {cartData.map((cart) => (
-              <SingleCart data={cart} />
+            {cartData.map((cart,i) => (
+              <SingleCart data={cart} key={i} />
             ))}
           </div>
         </div>

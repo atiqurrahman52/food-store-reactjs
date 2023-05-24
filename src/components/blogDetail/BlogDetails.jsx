@@ -5,7 +5,7 @@ import blog_3 from  '../../assets/images/blog-details/blog-detail-3.webp';
 import blog_4 from  '../../assets/images/blog-details/blog-detail-4.webp';
 import blog_5 from  '../../assets/images/blog-details/blog-detail-5.webp';
 
-// /assets/images/blog-details/blog-detail-5.webp
+
 
 const BlogDetails = ({data}) => {
   // const newData = data.find((item) => item !== undefined);

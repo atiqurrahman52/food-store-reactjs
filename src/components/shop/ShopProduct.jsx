@@ -11,81 +11,30 @@ const ShopProduct = () => {
   const [selectDropdown, setSelectDropdown] = useState("");
   const [selectCategoryDropdown, setselectCategoryDropdown] = useState("");
   const value = ["Highest Rated", "Newest", "Most Selling"];
-  const category = ["Meat & Fish", "Grocery", "Bread & Bakery", "Fruits", "Vegetable", "Breakfast & Dairy"];
+  const category = [
+    "Meat & Fish",
+    "Grocery",
+    "Bread & Bakery",
+    "Fruits",
+    "Vegetable",
+    "Breakfast & Dairy",
+  ];
   const handleDropdown = (item) => {
     setSelectDropdown(item);
     setShowDropdown(false);
-    console.log("MY DROPDOWN",showDropdown);
+    console.log("MY DROPDOWN", showDropdown);
   };
   const handleCategoryDropdown = (item) => {
     setselectCategoryDropdown(item);
     setShowCategoryDropdown(false);
-    console.log("MY showCategoryDropdown",showCategoryDropdown);
+    console.log("MY showCategoryDropdown", showCategoryDropdown);
   };
-
- 
-
 
   return (
     <div className="container">
       <div className="py-8 md:py-10">
         <div className="flex justify-between mb-6">
-
-      
-{/* 
-          <div className="relative">
-            <button className="categories-btn flex items-center justify-betwee space-x-7 md:space-x-[116px] bg-[#F5F5F5] py-2 md:py-[11px] px-3 md:px-6 rounded md:rounded-2xl">
-              <h2 className="font-NotoSans text-xs md:text-base text-text_color">
-                Categories
-              </h2>
-              <span>
-                <svg
-                  width="10"
-                  height="10"
-                  viewBox="0 0 10 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5 1V9M9 5H1"
-                    stroke="#071C1F"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-            </button>
-            <div className="categories-dropdown hidden absolute pt-[14px] lg:pt-[15px] md:-right-[34px] z-10">
-              <div className="bg-white shadow-[0_4px_15px_rgba(136,136,136,0.21)] p-4 w-[261px] h-auto right-0 border rounded-lg">
-                <div>
-                  <p className="font-Montserrat text-sm md:text-base text-p_text py-3 hover:text-primary_3 cursor-pointer">
-                    Meat & Fish
-                  </p>
-                  <p className="font-Montserrat text-sm md:text-base text-p_text py-3 hover:text-primary_3 cursor-pointer ">
-                    Grocery
-                  </p>
-                  <p className="font-Montserrat text-sm md:text-base text-p_text py-3 hover:text-primary_3 cursor-pointer ">
-                    Bread & Bakery
-                  </p>
-                  <p className="font-Montserrat text-sm md:text-base text-p_text py-3 hover:text-primary_3 cursor-pointer ">
-                    Fruits
-                  </p>
-                  <p className="font-Montserrat text-sm md:text-base text-p_text py-3 hover:text-primary_3 cursor-pointer ">
-                    Vegetable
-                  </p>
-                  <p className="font-Montserrat text-sm md:text-base text-p_text py-3 hover:text-primary_3 cursor-pointer ">
-                    Breakfast & Dairy
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
-          
-
           <button
-          
             className="relative"
             onBlur={() => setShowCategoryDropdown(false)}
           >
@@ -94,7 +43,7 @@ const ShopProduct = () => {
               className="flex justify-between items-center gap-1 md:gap-0 text-xs md:text-sm px-2 md:px-3 py-1 md:py-3 md:w-[204px] h-10 md:h-12 bg-[#F5F5F5] rounded-md md:rounded-xl"
             >
               <span className="text-text_color text-xs md:text-base">
-              Categories
+                Categories
               </span>
               {selectCategoryDropdown}
               {/* <CaretDown
@@ -121,13 +70,7 @@ const ShopProduct = () => {
             )}
           </button>
 
-         
-
-          <button
-          
-            className="relative"
-            onBlur={() => setShowDropdown(false)}
-          >
+          <button className="relative" onBlur={() => setShowDropdown(false)}>
             <div
               onClick={() => setShowDropdown(true)}
               className="flex justify-between items-center gap-3 text-xs md:text-sm px-2 md:px-3 py-1 md:py-3 md:w-[204px] h-10 md:h-12 bg-[#F5F5F5] rounded-md md:rounded-xl"
@@ -158,7 +101,6 @@ const ShopProduct = () => {
               </ul>
             )}
           </button>
-
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
